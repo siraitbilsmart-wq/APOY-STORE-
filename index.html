@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>APOY STORE — Dark Anime Edition</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #eee;
+}
+.container {
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #550000;
+  border-radius: 14px;
+  background: rgba(0,0,0,.75);
+  box-shadow: 0 0 20px #ff000030;
+}
+h1 {
+  text-align: center;
+  color: #ff4444;
+  text-shadow: 0 0 8px #ff0000;
+}
+.tagline {
+  text-align: center;
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+select, input, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+select, input {
+  background: #111;
+  color: #fff;
+}
+button {
+  background: linear-gradient(45deg, #ff0000, #700000);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: 0 0 10px #ff0000;
+}
+.total {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #ff7777;
+  text-align: center;
+}
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h1>⛩️ APOY STORE ⛩️</h1>
+  <div class="tagline">🔥 Dark Anime Edition — Power Never Dies 🔥</div>
+
+  <input type="text" placeholder="Masukkan ID FF">
+
+  <select id="diamond" onchange="setHarga()">
+    <option value="">-- Pilih Diamond --</option>
+    <option value="813">5 Diamond – Rp 813</option>
+    <option value="1626">10 Diamond – Rp 1.626</option>
+    <option value="1826">12 Diamond – Rp 1.826</option>
+    <option value="2439">15 Diamond – Rp 2.439</option>
+    <option value="3252">20 Diamond – Rp 3.252</option>
+    <option value="4065">25 Diamond – Rp 4.065</option>
+    <option value="4878">30 Diamond – Rp 4.878</option>
+    <option value="6504">40 Diamond – Rp 6.504</option>
+    <option value="6878">50 Diamond – Rp 6.878</option>
+    <option value="7691">55 Diamond – Rp 7.691</option>
+    <option value="9334">70 Diamond – Rp 9.334</option>
+    <option value="10147">75 Diamond – Rp 10.147</option>
+    <option value="10960">80 Diamond – Rp 10.960</option>
+    <option value="12586">90 Diamond – Rp 12.586</option>
+    <option value="13756">100 Diamond – Rp 13.756</option>
+    <option value="16212">120 Diamond – Rp 16.212</option>
+    <option value="17838">130 Diamond – Rp 17.838</option>
+    <option value="18668">140 Diamond – Rp 18.668</option>
+    <option value="19555">145 Diamond – Rp 19.555</option>
+    <option value="20368">150 Diamond – Rp 20.368</option>
+    <option value="21994">160 Diamond – Rp 21.994</option>
+    <option value="23620">170 Diamond – Rp 23.620</option>
+    <option value="25620">190 Diamond – Rp 25.620</option>
+    <option value="27246">200 Diamond – Rp 27.246</option>
+    <option value="28076">210 Diamond – Rp 28.076</option>
+    <option value="37484">280 Diamond – Rp 37.484</option>
+    <option value="40736">300 Diamond – Rp 40.736</option>
+    <option value="46893">355 Diamond – Rp 46.893</option>
+    <option value="47706">360 Diamond – Rp 47.706</option>
+    <option value="50145">375 Diamond – Rp 50.145</option>
+    <option value="54210">400 Diamond – Rp 54.210</option>
+    <option value="53771">405 Diamond – Rp 53.771</option>
+    <option value="56227">425 Diamond – Rp 56.227</option>
+    <option value="63105">475 Diamond – Rp 63.105</option>
+    <option value="65635">495 Diamond – Rp 65.635</option>
+    <option value="66448">500 Diamond – Rp 66.448</option>
+    <option value="68074">510 Diamond – Rp 68.074</option>
+    <option value="72513">545 Diamond – Rp 72.513</option>
+    <option value="74969">565 Diamond – Rp 74.969</option>
+    <option value="84377">635 Diamond – Rp 84.377</option>
+    <option value="97658">720 Diamond – Rp 97.658</option>
+    <option value="98471">725 Diamond – Rp 98.471</option>
+    <option value="100910">740 Diamond – Rp 100.910</option>
+    <option value="104536">770 Diamond – Rp 104.536</option>
+    <option value="106992">790 Diamond – Rp 106.992</option>
+    <option value="108618">800 Diamond – Rp 108.618</option>
+    <option value="116400">860 Diamond – Rp 116.400</option>
+    <option value="125734">930 Diamond – Rp 125.734</option>
+    <option value="135142">1000 Diamond – Rp 135.142</option>
+    <option value="142020">1050 Diamond – Rp 142.020</option>
+    <option value="144551">1075 Diamond – Rp 144.551</option>
+    <option value="145364">1080 Diamond – Rp 145.364</option>
+    <option value="195316">1440 Diamond – Rp 195.316</option>
+    <option value="193434">1450 Diamond – Rp 193.434</option>
+    <option value="266760">2000 Diamond – Rp 266.760</option>
+    <option value="269142">2020 Diamond – Rp 269.142</option>
+    <option value="285502">2140 Diamond – Rp 285.502</option>
+    <option value="290137">2180 Diamond – Rp 290.137</option>
+    <option value="293389">2200 Diamond – Rp 293.389</option>
+    <option value="365421">2720 Diamond – Rp 365.421</option>
+    <option value="401551">3000 Diamond – Rp 401.551</option>
+    <option value="483543">3640 Diamond – Rp 483.543</option>
+    <option value="531249">4000 Diamond – Rp 531.249</option>
+    <option value="593787">4450 Diamond – Rp 593.787</option>
+    <option value="731561">5500 Diamond – Rp 731.561</option>
+    <option value="798926">6000 Diamond – Rp 798.926</option>
+    <option value="862122">6480 Diamond – Rp 862.122</option>
+    <option value="968712">7290 Diamond – Rp 968.712</option>
+    <option value="1066370">8010 Diamond – Rp 1.066.370</option>
+    <option value="1303837">9800 Diamond – Rp 1.303.837</option>
+    <option value="1937424">14580 Diamond – Rp 1.937.424</option>
+    <option value="4849186">36500 Diamond – Rp 4.849.186</option>
+    <option value="9712128">73100 Diamond – Rp 9.712.128</option>
+  </select>
+
+  <div class="total" id="total">Total: Rp 0</div>
+
+  <button onclick="order()">ORDER SEKARANG</button>
+
+  <div class="footer">
+    ⚡ Fast Process • 💎 Trusted • 🔥 Dark Anime Vibes<br>
+    WA: 0877-8210-8664
+  </div>
+</div>
+
+<script>
+function setHarga() {
+  const d = document.getElementById("diamond");
+  const harga = d.value;
+  document.getElementById("total").innerText =
+    harga ? "Total: Rp " + Number(harga).toLocaleString("id-ID") : "Total: Rp 0";
+}
+
+function order() {
+  const id = document.querySelector("input").value;
+  const d = document.getElementById("diamond");
+  if (!id || !d.value) {
+    alert("Lengkapi ID dan Diamond dulu!");
+    return;
+  }
+  const text = `Halo APOY STORE,%0ASaya mau top up FF%0AID: ${id}%0ADiamond: ${d.options[d.selectedIndex].text}`;
+  window.open(`https://wa.me/6287782108664?text=${text}`, "_blank");
+}
+</script>
+</body>
+      </html>
